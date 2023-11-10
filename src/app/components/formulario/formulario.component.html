@@ -1,1 +1,85 @@
-<p>formulario works!</p>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+            <div class="mb-2">
+                <label class="form-label">Titulo</label>
+                <input type="text" class="form-control" formControlName="titulo" placeholder="Post Title">
+
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Texto</label>
+                <input type="text" class="form-control" formControlName="texto" placeholder="Text">
+
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Autor</label>
+                <input type="text" class="form-control" formControlName="autor" placeholder="Author">
+
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Imagen</label>
+                <input type="text" class="form-control" formControlName="imagen" placeholder="URL">
+
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Fecha</label>
+                <input type="text" class="form-control" formControlName="fecha" placeholder="DD/MM/YYYY">
+
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Categoria</label>
+                <input type="text" class="form-control" formControlName="categoria" placeholder="Category">
+                <option value=""></option>
+
+            </div>
+
+            <button class="btn btn-success" type="submit">Submit</button>
+
+        </form>
+    </div>
+</div>
+
+{{postForm.value | json}}
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Titulo</label>
+        <input type="text" name="nombre" class="form-control" formControlName="titulo">
+        <div class="alert alert-danger mt-2" [hidden]="nombre.valid || nombre.pristine">Mandatory field</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Texto</label>
+        <input type="text" name="apellidos" class="form-control" formControlName="texto">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Autor</label>
+        <input type="email" name="email" class="form-control" formControlName="autor">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Imagen</label>
+        <input type="number" name="edad" class="form-control" formControlName="imagen">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Fecha</label>
+        <input type="password" name="password" class="form-control" formControlName="fecha">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Categoria</label>
+        <input type="password" name="password" class="form-control" formControlName="categoria">
+    </div>
+
+    <input type="submit" value="Enviar" class="btn btn-info">
+</form>
+
+-->
