@@ -6,12 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaPostComponent } from './components/lista-post/lista-post.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { CategoriasNavBarComponent } from './components/categorias-nav-bar/categorias-nav-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
+import { SinglePostComponent } from './pages/single-post/single-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaPostComponent,
-    FormularioComponent
+    FormularioComponent,
+    NavBarComponent,
+    CategoriasNavBarComponent,
+    FooterComponent,
+    PostCardComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,

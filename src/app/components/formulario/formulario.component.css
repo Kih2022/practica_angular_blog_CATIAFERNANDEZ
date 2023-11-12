@@ -1,0 +1,10 @@
+.container {
+    background-color: gray;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.container img {
+    max-width: 100%;
+}

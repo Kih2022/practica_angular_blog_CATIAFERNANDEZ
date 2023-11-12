@@ -6,20 +6,20 @@ import { IPost } from '../interfaces/post.interface';
 })
 export class PostServiceService {
 
-  private arrPost: IPost[] = [];
+  private arrPosts: IPost[] = [];
 
 
   create(post: IPost) {
-    this.arrPost.push(post);
+    this.arrPosts.push(post);
   }
 
   getAll(): IPost[] {
-    return this.arrPost;
+    return this.arrPosts;
 
   }
 
   getByCategoria(categoria: string): IPost[] {
-    return this.arrPost.filter(item => item.categoria === categoria);
+    return this.arrPosts.filter(item => item.categoria === categoria);
   }
 
 

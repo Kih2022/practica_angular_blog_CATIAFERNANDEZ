@@ -1,20 +1,15 @@
-<div class="header">
-    <header>
-        <nav class="container">
-            <a href="">The AI Mind</a>
-            <div id="btnMenu"></div>
-            <app-formulario></app-formulario>
-            <app-lista-post></app-lista-post>
-        </nav>
-    </header>
+<app-nav-bar></app-nav-bar>
+<app-categorias-nav-bar></app-categorias-nav-bar>
+
+
+<div class="body">
+    <router-outlet></router-outlet>
 </div>
 
+<!--<app-post-card></app-post-card>-->
 
+<!--<app-lista-post></app-lista-post>-->
 
+<!--<app-formulario></app-formulario>-->
 
-
-
-
-
-
-<router-outlet></router-outlet>
+<app-footer></app-footer>

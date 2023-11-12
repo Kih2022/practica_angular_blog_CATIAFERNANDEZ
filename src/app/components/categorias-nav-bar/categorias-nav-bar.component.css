@@ -1,0 +1,17 @@
+nav {
+    margin-top: 100px;
+    /*para separarme del container logo*/
+    height: 50p;
+    background-color: lightgray;
+}
+
+.nav-link {
+    /*para los enlaces*/
+    text-transform: uppercase;
+    /*los items a mayusculas*/
+    color: white;
+    /* color primario*/
+
+
+
+}

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { IPost } from 'src/app/interfaces/post.interface';
+import { PostServiceService } from 'src/app/services/post-service.service';
 
 @Component({
   selector: 'app-lista-post',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./lista-post.component.css']
 })
 export class ListaPostComponent {
+
+  arrpost: IPost[] = [];
+
+  postService = inject(PostServiceService);
+
+  ngOnInit() {
+    this.arrpost = this.postService.getAll();
+    console.log(this.arrpost);
+
+  }
 
 }
