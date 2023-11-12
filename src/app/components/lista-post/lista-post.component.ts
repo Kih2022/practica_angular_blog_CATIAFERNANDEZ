@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { IPost } from 'src/app/interfaces/post.interface';
 import { PostServiceService } from 'src/app/services/post-service.service';
 
@@ -11,11 +12,14 @@ export class ListaPostComponent {
 
   arrpost: IPost[] = [];
 
+  activatedRoute = inject(ActivatedRoute);
   postService = inject(PostServiceService);
 
   ngOnInit() {
     this.arrpost = this.postService.getAll();
     console.log(this.arrpost);
+
+
 
   }
 

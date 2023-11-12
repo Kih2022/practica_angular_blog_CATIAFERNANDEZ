@@ -46,7 +46,7 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
                     <div class="mb-2">
                         <label class="form-label">Titulo</label>
@@ -62,18 +62,27 @@
                         <input type="text" class="form-control" formControlName="autor" placeholder="Autor">
                     </div>
                     <div class="mb-2">
-                        <label class="form-label">Feccha</label>
+                        <label class="form-label">Fecha</label>
                         <input type="text" class="form-control" formControlName="fecha" placeholder="fecha">
                     </div>
                     <div class="mb-2">
                         <label class="form-label">Categoria</label>
-                        <input type="text" class="form-control" formControlName="categoria" placeholder="categoria">
+                        <select class="form-control">
+                            <option value="" disabled></option>
+                        </select>
+                        <!--  <input type="text" class="form-control" formControlName="categoria"
+                            placeholder="Selecciona una categoria">  -->
+                    </div>
+                    <div class="formGroup">
+                        <label for="">Post Image</label>
+                        <img class="form-control img-fluid img-preview" src="imgSrc" alt="">
+                        <input class="form-control" type="file" accept="image/*">
                     </div>
 
                     <button class="btn btn-success" type="submit">Submit</button>
                 </form>
             </div>
-            <div class="container col-md-6">
+            <div class="container col-md-4">
                 <img src="#" alt="Image" class="img-thumbnail">
             </div>
         </div>
