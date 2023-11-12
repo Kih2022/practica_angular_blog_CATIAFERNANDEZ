@@ -1,6 +1,7 @@
-.container {
+.body {
     /*para visualizar los componentes  que estan por defecto debajo de los otrs*/
     min-height: 85vh;
     margin-top: 150px;
     min-height: 75vh;
+    font-family: sans-serif;
 }

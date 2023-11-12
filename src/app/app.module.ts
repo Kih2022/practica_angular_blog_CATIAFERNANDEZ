@@ -11,6 +11,7 @@ import { CategoriasNavBarComponent } from './components/categorias-nav-bar/categ
 import { FooterComponent } from './components/footer/footer.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { SinglePostComponent } from './pages/single-post/single-post.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SinglePostComponent } from './pages/single-post/single-post.component';
     CategoriasNavBarComponent,
     FooterComponent,
     PostCardComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

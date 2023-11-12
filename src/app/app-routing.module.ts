@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListaPostComponent } from './components/lista-post/lista-post.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { SinglePostComponent } from './pages/single-post/single-post.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/posts' },
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: 'home', component: HomeComponent },
   { path: 'posts', component: ListaPostComponent },
   { path: 'blog/new', component: FormularioComponent },
   { path: 'readme', component: SinglePostComponent },

@@ -12,15 +12,17 @@ export class ListaPostComponent {
 
   arrpost: IPost[] = [];
 
+  postSeleccionado: IPost | undefined;
+
   activatedRoute = inject(ActivatedRoute);
   postService = inject(PostServiceService);
 
   ngOnInit() {
     this.arrpost = this.postService.getAll();
     console.log(this.arrpost);
-
-
-
   }
+
+
+
 
 }

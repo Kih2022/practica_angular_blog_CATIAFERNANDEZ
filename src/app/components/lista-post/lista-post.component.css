@@ -1,3 +1,7 @@
-.home {
+.featured-section {
     background-color: lightskyblue;
+}
+
+.container {
+    gap: 10px;
 }
