@@ -1,14 +1,36 @@
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top"
-        src="https://images.unsplash.com/photo-1698551599904-45b276f222ed?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Card image cap">
+<div class="card shadow-e" style="width: 18rem">
+    <figure class="imagen" [ngStyle]="{ backgroundImage: 'url('+postSeleccionado.imagen+')'}">
+        "
+        <!--<img class="card-img-top" [src]="postSeleccionado.imagen" alt="Card image cap">-->
+
+    </figure>
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur cum
-            aliquam voluptatem. Sit, incidunt dolores possimus, inventore illo, reiciendis totam cupiditate autem est
-            harum saepe asperiores fuga sunt quas.</p>
+        <h5 class="card-title">{{postSeleccionado.titulo}}</h5>
+        <p class="card-text">{{postSeleccionado.texto}}</p>
+        <small>{{postSeleccionado.autor}} </small>
+        <p>Fecha creacion: {{postSeleccionado.fecha| date: 'dd/MM/YYYY hh:mm:ss'}} </p>
+        <p>{{postSeleccionado.categoria}}</p>
+
+        <button *ngIf="botonActivo" class="btn btn-info" [routerLink]="['/readme']"></button>
 
         <a href="#" class="btn btn-primary">Show me more</a>
 
     </div>
 </div>
+<!--
+<div class="card">
+    <img src="#">
+    <div class="card-body">
+        <small class="bg-light text-info text-center ml-3">Views: 506.125 </small>
+        <h5 class="mt-1">My first blog 2023</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iure dolorem culpa? Quod et facilis
+            tenetur iusto natus, consequuntur laudantium. Minus odit culpa deserunt quasi. Obcaecati animi molestiae
+            consectetur dolorem!</p>
+        <small class="bg-light text-warning text-center ml-3">updated on nov/23</small>
+        <p>Fecha creacion: {{postSeleccionado.fecha| date: 'dd/MM/YYYY hh:mm:ss'}} </p>
+        <p>{{postSeleccionado.categoria}}</p>
+
+        <a href="#" class="btn btn-primary">Show me more</a>
+    </div>
+</div>
+-->

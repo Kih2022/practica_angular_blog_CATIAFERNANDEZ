@@ -15,24 +15,10 @@
         </div>
         <div class="container mt-5 mb-5">
             <div class="row mt-2 justify-content-center">
-                <div class="col-md-2 mb-3">
-                    <app-post-card></app-post-card>
+                <div class="col-md-2 mb-3" *ngFor="let post of arrpost" (click)="onClick(post)">
+                    <app-post-card [postSeleccionado]="post"></app-post-card>
                 </div>
-                <div class="col-md-2 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
+
             </div>
 
         </div>

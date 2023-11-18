@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, Output, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPost } from 'src/app/interfaces/post.interface';
 import { PostServiceService } from 'src/app/services/post-service.service';
 
@@ -11,15 +11,23 @@ import { PostServiceService } from 'src/app/services/post-service.service';
 export class ListaPostComponent {
 
   arrpost: IPost[] = [];
-
-  postSeleccionado: IPost | undefined;
-
-  activatedRoute = inject(ActivatedRoute);
   postService = inject(PostServiceService);
+  router = inject(Router)
+
+  //postSeleccionado: IPost | undefined;
+
+  @Output() postSeleccionado: EventEmitter<IPost> = new EventEmitter
+
+
+
 
   ngOnInit() {
     this.arrpost = this.postService.getAll();
     console.log(this.arrpost);
+  }
+
+  onClick(post: IPost) {
+    this.postSeleccionado.emit(post)
   }
 
 

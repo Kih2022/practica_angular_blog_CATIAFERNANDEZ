@@ -18,18 +18,22 @@ export class FormularioComponent {
 
   constructor() {
     this.postForm = new FormGroup({
-      titulo: new FormControl('', [Validators.required, Validators.maxLength(18)]),
-      texto: new FormControl('', [Validators.required, Validators.maxLength(200)]),
-      autor: new FormControl('', Validators.required),
-      imagen: new FormControl('', Validators.required),
-      fecha: new FormControl('', Validators.required),
-      category: new FormControl('', Validators.required),
+      titulo: new FormControl(null, []),
+      texto: new FormControl(null, []),
+      autor: new FormControl(null, []),
+      imagen: new FormControl(null, []),
+      fecha: new FormControl(null, []),
+      category: new FormControl(null, []),
 
     })
   }
 
-  onSubmit() {
-    return this.postForm.value;
+  onSubmit() { //aqui lanzamos la peticion para que me cree el post
+    // return this.postForm.value;
+
+    const valoresFormulario = this.postForm.value;
+    this.postService.create(valoresFormulario)
+    this.router.navigate(['posts'])
   }
 
 

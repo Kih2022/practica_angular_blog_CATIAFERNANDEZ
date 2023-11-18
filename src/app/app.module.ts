@@ -4,8 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaPostComponent } from './components/lista-post/lista-post.component';
-import { FormularioComponent } from './components/formulario/formulario.component';
+import { ListaPostComponent } from './pages/lista-post/lista-post.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CategoriasNavBarComponent } from './components/categorias-nav-bar/categorias-nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -29,6 +29,7 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

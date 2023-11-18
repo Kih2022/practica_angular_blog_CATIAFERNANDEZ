@@ -9,24 +9,26 @@
         </div>
         <div class="container1 mt-5 mb-5">
             <div class="row justify-content-center mt-2 mb-2">
-                <div class="col-lg-3 mb-3">
-                    <app-post-card></app-post-card>
+                <div class="col-lg-3 mb-3" *ngFor="let post of arrpost">
+                    <app-post-card [postSeleccionado]="post"></app-post-card>
                 </div>
-                <div class="col-lg-3 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <app-post-card></app-post-card>
-                </div>
+
             </div>
+            <div>
+                <label class="form-label">Selecciona una Categoria</label>
+                <select class="form-select" (change)="onChange($event)">
+                    <option value=""></option>
+                    <option *ngFor="let post of arrpost">{{post.categoria}} </option>
+                </select>
+            </div>
+
 
         </div>
     </div>
 </section>
 
+
+<!--
 <section class="container2 mt-5">
     <div class="col-md-12 text-center">
         <h2>Latest Posts</h2>
@@ -64,3 +66,4 @@
 
     </div>
 </section>
+-->

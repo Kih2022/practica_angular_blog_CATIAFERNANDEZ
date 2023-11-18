@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListaPostComponent } from './components/lista-post/lista-post.component';
-import { FormularioComponent } from './components/formulario/formulario.component';
+import { ListaPostComponent } from './pages/lista-post/lista-post.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
 import { SinglePostComponent } from './pages/single-post/single-post.component';
 import { HomeComponent } from './pages/home/home.component';
 
