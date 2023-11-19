@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPost } from 'src/app/interfaces/post.interface';
 import { PostServiceService } from 'src/app/services/post-service.service';
 
@@ -13,6 +14,7 @@ export class HomeComponent {
   arrCategorias: string[] = [];
 
   postService = inject(PostServiceService);
+  router = inject(Router);
 
 
 

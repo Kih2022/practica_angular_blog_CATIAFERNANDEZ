@@ -1,22 +1,40 @@
 <div class="card shadow-e" style="width: 18rem">
-    <figure class="imagen" [ngStyle]="{ backgroundImage: 'url('+postSeleccionado.imagen+')'}">
-        "
-        <!--<img class="card-img-top" [src]="postSeleccionado.imagen" alt="Card image cap">-->
-
-    </figure>
-    <div class="card-body">
-        <h5 class="card-title">{{postSeleccionado.titulo}}</h5>
+    <article class="imagen">
+        <figure>
+            <img class="card-img-top" [src]="postSeleccionado.imagen" alt="Card image cap">
+        </figure>
+        <!-- <div class="card-body"> -->
+        <h2 class="card-title">{{postSeleccionado.titulo}}</h2>
         <p class="card-text">{{postSeleccionado.texto}}</p>
         <small>{{postSeleccionado.autor}} </small>
         <p>Fecha creacion: {{postSeleccionado.fecha| date: 'dd/MM/YYYY hh:mm:ss'}} </p>
         <p>{{postSeleccionado.categoria}}</p>
 
-        <button *ngIf="botonActivo" class="btn btn-info" [routerLink]="['/readme']"></button>
+        <!-- <button *ngIf="botonActivo" class="btn btn-info" [routerLink]="['/readme']"></button> -->
 
-        <a href="#" class="btn btn-primary">Show me more</a>
+        <a class="btn btn-primary" *ngIf="botonActivo" class="btn btn-info"
+            [routerLink]="['/readme',postSeleccionado.id]">Show
+            me
+            more</a>
 
-    </div>
+        <!-- </div> -->
+    </article>
+
 </div>
+
+
+
+<!-- [ngStyle]="{ backgroundImage: 'url('+ postSeleccionado.imagen +')'}" -->
+
+
+
+
+
+
+
+
+
+
 <!--
 <div class="card">
     <img src="#">

@@ -1,22 +1,23 @@
-<!--
-<div class="Posts">
-    <app-formulario *ngFor="let post of arrpost"></app-formulario>
-</div> 
--->
-
 <section class="featured-section">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center mt-5">
                 <h2>Latest posts</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum voluptatem culpa alias velit
-                    cum, ex animi. </p>
+                <div class="container">
+                    <label class="form-label">Selecciona una categoria</label>
+                    <select class="form-select" (change)="onChange($event)">
+                        <option value="category">Choose</option>
+                        <option *ngFor="let post of arrpost">{{post.categoria}} </option>
+                    </select>
+                </div>
             </div>
         </div>
         <div class="container mt-5 mb-5">
-            <div class="row mt-2 justify-content-center">
-                <div class="col-md-2 mb-3" *ngFor="let post of arrpost" (click)="onClick(post)">
-                    <app-post-card [postSeleccionado]="post"></app-post-card>
+            <div class="row mt-2 ">
+                <div class="col-md-3 mb-3" *ngFor="let post of arrpost" (click)="onClick(post)">
+                    <div class="card">
+                        <app-post-card [postSeleccionado]="post"></app-post-card>
+                    </div>
                 </div>
 
             </div>
@@ -24,5 +25,3 @@
         </div>
     </div>
 </section>
-
-<section class="container mt-5"></section>

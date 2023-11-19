@@ -11,8 +11,10 @@ import { PostServiceService } from 'src/app/services/post-service.service';
 export class ListaPostComponent {
 
   arrpost: IPost[] = [];
+  arrCategorias: string[] = [];
+
   postService = inject(PostServiceService);
-  router = inject(Router)
+  // router = inject(Router)
 
   //postSeleccionado: IPost | undefined;
 
@@ -23,7 +25,7 @@ export class ListaPostComponent {
 
   ngOnInit() {
     this.arrpost = this.postService.getAll();
-    console.log(this.arrpost);
+    this.arrCategorias = this.postService.getCategorias();
   }
 
   onClick(post: IPost) {
@@ -31,6 +33,9 @@ export class ListaPostComponent {
   }
 
 
+  onChange($event: any) {
+    this.arrpost = this.postService.getByCategoria($event.target.value);
+  }
 
 
 }

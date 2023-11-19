@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
-//import { Router } from '@angular/router';
+import { Router } from '@angular/router';
+
 import { IPost } from 'src/app/interfaces/post.interface';
 //import { PostServiceService } from 'src/app/services/post-service.service';
 
@@ -10,9 +11,9 @@ import { IPost } from 'src/app/interfaces/post.interface';
 })
 export class PostCardComponent {
 
-  // @Input() post!: IPost
+  @Input() post!: IPost
 
-  //router = inject(Router)
+  router = inject(Router)
   //postService = inject(PostServiceService);
 
 
@@ -28,7 +29,7 @@ export class PostCardComponent {
 
   constructor() {
     this.postSeleccionado = {
-      titulo: '', texto: '', autor: '', imagen: '', fecha: '', categoria: ''
+      id: 0, titulo: '', texto: '', autor: '', imagen: '', fecha: '', categoria: ''
     }
   }
 

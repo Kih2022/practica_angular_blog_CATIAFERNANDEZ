@@ -1,53 +1,24 @@
-<!--<div class="card">
-    <div class="card-body">
-        <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-            <div class="mb-2">
-                <label class="form-label">Titulo</label>
-                <input type="text" class="form-control" formControlName="titulo" placeholder="Titulo de tu post">
-
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Texto</label>
-                <input type="text" class="form-control" formControlName="texto" placeholder="Texto">
-
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Autor</label>
-                <input type="text" class="form-control" formControlName="autor" placeholder="Autor">
-
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Imagen</label>
-                <input type="text" class="form-control" formControlName="imagen" placeholder="URL">
-
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Fecha</label>
-                <input type="text" class="form-control" formControlName="fecha" placeholder="DD/MM/YYYY">
-
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Categoria</label>
-                <input type="text" class="form-control" formControlName="categoria" placeholder="Categoria">
-
-            </div>
-
-            <button class="btn btn-success" type="submit">Submit</button>
-
-        </form>
-    </div>
-</div>
-
-{{postForm.value | json}}
--->
-
-
-
 <div class="card">
     <div class="card-body">
         <div class="row">
             <div class="col-md-8">
                 <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-2">
+                        <label class="form-label">Id</label>
+                        <input type="number" class="form-control" formControlName="id" placeholder="Id número" min="5"
+                            required>
+                        <div *ngIf="postForm.get('id')?.hasError('required')">
+                            El campo Id es obligatorio.
+                        </div>
+                        <div *ngIf="postForm.get('id')?.hasError('min')">
+                            El Id debe ser mayor que 5.
+                        </div>
+                        <div *ngIf="postForm.get('id')?.hasError('pattern')">
+                            Ingresa un número positivo válido.
+                        </div>
+
+
+                    </div>
                     <div class="mb-2">
                         <label class="form-label">Titulo</label>
                         <input type="text" class="form-control" formControlName="titulo"
@@ -63,12 +34,15 @@
                     </div>
                     <div class="mb-2">
                         <label class="form-label">Fecha</label>
-                        <input type="text" class="form-control" formControlName="fecha" placeholder="Fecha">
+                        <input type="date" class="form-control" formControlName="fecha" placeholder="Fecha">
                     </div>
                     <div class="mb-2">
                         <label class="form-label">Categoria</label>
                         <select class="form-control" formControlName="categoria">
                             <option value="" disabled></option>
+                            <option value="softawe">Software</option>
+                            <option value="softawe">Software</option>
+                            <option value="softawe">Software</option>
                         </select>
                     </div>
                     <div class="formGroup">
@@ -81,50 +55,10 @@
                 </form>
             </div>
             <div class=" container col-md-4">
-                <img src="#" alt="Image" class="img-thumbnail">
+                <img
+                    src="https://images.unsplash.com/photo-1505744386214-51dba16a26fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eW91JTIwY3JlYXRlfGVufDB8fDB8fHww">
+                <p>Now is your turn,
+                    be creative!</p>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--
-<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label class="form-label">Titulo</label>
-        <input type="text" name="nombre" class="form-control" formControlName="titulo">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Texto</label>
-        <input type="text" name="apellidos" class="form-control" formControlName="texto">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Autor</label>
-        <input type="email" name="email" class="form-control" formControlName="autor">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Imagen</label>
-        <input type="number" name="edad" class="form-control" formControlName="imagen">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Fecha</label>
-        <input type="password" name="password" class="form-control" formControlName="fecha">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Categoria</label>
-        <input type="password" name="password" class="form-control" formControlName="categoria">
-    </div>
-
-    <input type="submit" value="Enviar" class="btn btn-info">
-</form>
--->

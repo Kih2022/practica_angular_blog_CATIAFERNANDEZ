@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row mt-5">
         <div class="col-md-9 ">
 
@@ -20,6 +20,8 @@
             </div>
         </div>
 
+
+
         <div class="col-md-3 ">
             <app-post-card></app-post-card>
             <app-post-card></app-post-card>
@@ -27,21 +29,26 @@
         </div>
     </div>
 
-</div>
+</div> -->
 
 
 
 
-<!-- <div class="container">
+<div class="container">
     <div class="row mt-5">
-        <div class="col-md-9 ">
-
-
-            <div class="card" *ngIf="postSeleccionado">
-                <app-post-card></app-post-card>
-                <router-outlet></router-outlet>
-
+        <div class="col-md-12 ">
+            <div class="container text-center">
+                <img [src]="postSeleccionado?.imagen" alt="">
             </div>
+            <div class="container justify-content-center">
+                <h2>{{postSeleccionado?.titulo}} </h2>
+                <p>{{postSeleccionado?.texto}} </p>
+                <small>{{postSeleccionado?.autor}} </small>
+                <p>{{postSeleccionado?.fecha}} </p>
+                <p>{{postSeleccionado?.categoria}}</p>
+                <p>Id: {{postSeleccionado?.id}}</p>
+            </div>
+
         </div>
     </div>
-</div> -->
+</div>

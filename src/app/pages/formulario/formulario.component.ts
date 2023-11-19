@@ -16,8 +16,10 @@ export class FormularioComponent {
 
   postForm: FormGroup;
 
+
   constructor() {
     this.postForm = new FormGroup({
+      id: new FormControl(null, [Validators.required, Validators.min(5), Validators.pattern(/^[0-9]\d*$/)]),
       titulo: new FormControl(null, []),
       texto: new FormControl(null, []),
       autor: new FormControl(null, []),
@@ -31,10 +33,13 @@ export class FormularioComponent {
   onSubmit() { //aqui lanzamos la peticion para que me cree el post
     // return this.postForm.value;
 
+    // this.postService.create(this.postForm.value);
+
     const valoresFormulario = this.postForm.value;
     this.postService.create(valoresFormulario)
     this.router.navigate(['posts'])
   }
+
 
 
 

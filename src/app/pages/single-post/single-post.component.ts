@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IPost } from 'src/app/interfaces/post.interface';
 import { PostServiceService } from 'src/app/services/post-service.service';
 
@@ -11,13 +11,21 @@ import { PostServiceService } from 'src/app/services/post-service.service';
 export class SinglePostComponent {
 
   postSeleccionado: IPost | undefined;
+  router = inject(Router);
+  //arrpost: IPost[] = [];
 
   activatedRoute = inject(ActivatedRoute);
   postService = inject(PostServiceService);
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      return this.postService.getByCategoria((params['posts']))
+      // return this.postService.getByCategoria((params['posts']))
+      // this.postSeleccionado = this.postService.getByCategoria(parseInt(params['readme']))
+      this.postSeleccionado = this.postService.getById(Number(params['postId']));
+      console.log(this.postSeleccionado);
+
+
+
     });
   }
 

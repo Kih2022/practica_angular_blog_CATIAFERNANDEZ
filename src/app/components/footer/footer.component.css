@@ -1,7 +1,8 @@
 footer {
-    height: 130px;
+    height: 200px;
     padding: 15px;
-    background-color: lightgray;
+    background-image: url("https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdoaXRlJTIwc29mdCUyMCUyMHRleHR1cmVkfGVufDB8fDB8fHww");
+
 
 }
 
@@ -15,9 +16,9 @@ footer {
 }
 
 .nav-link {
-    color: white;
+    color: rgb(68, 68, 68);
 }
 
 p {
-    color: white;
+    color: rgb(68, 68, 68);
 }

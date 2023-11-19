@@ -2,5 +2,27 @@
     padding-left: 130px;
     padding-right: 130px;
     padding-bottom: 130px;
-    background-color: cornflowerblue;
+
+    color: rgb(68, 68, 68);
+    background-color: whitesmoke;
+
+}
+
+.bg-image {
+    background-image: url("https://images.unsplash.com/photo-1698725224250-afb10355c2c4?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    height: 86vh;
+}
+
+
+
+a {
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(68, 68, 68);
+}
+
+h2 {
+    color: rgb(68, 68, 68);
 }

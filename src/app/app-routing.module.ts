@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'posts', component: ListaPostComponent },
   { path: 'blog/new', component: FormularioComponent },
-  { path: 'readme', component: SinglePostComponent },
-  { path: '**', redirectTo: '/posts' }
+  { path: 'readme/:postId', component: SinglePostComponent },
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({

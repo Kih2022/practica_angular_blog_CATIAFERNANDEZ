@@ -1,10 +1,15 @@
 .card {
     margin-top: 150px;
+    background-color: whitesmoke;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-bottom: 130px;
+    padding-top: 200px;
 }
 
 
 .container {
-    background-color: gray;
+    background-color: transparent;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
@@ -12,4 +17,9 @@
 
 .container img {
     max-width: 100%;
+}
+
+.container p {
+    padding-top: 50px;
+    font-size: larger;
 }
