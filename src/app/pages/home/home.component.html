@@ -2,13 +2,6 @@
     <div class="hero-image-full">
         <img [src]="">
     </div>
-    <!-- <div class="jumbotron text-container center">
-        <div class="text-content">
-            <h1 class="title">IT BOOTCAMP</h1>
-        </div>
-    </div> -->
-
-
 </section>
 
 
@@ -18,13 +11,7 @@
             <div class="col-md-12 text-center mt-5">
                 <h2>Lo más leído</h2>
                 <a [routerLink]="['/posts']">Ver todos los posts >> </a>
-                <!-- <div class="col-md-2">
-                    <label class="form-label">Selecciona una Categoria</label>
-                    <select class="form-select" (change)="onChange($event)">
-                        <option value=""></option>
-                        <option *ngFor="let post of arrpost">{{post.categoria}} </option>
-                    </select>
-                </div> -->
+
             </div>
         </div>
         <div class="container1 mt-5 mb-5">
@@ -33,55 +20,7 @@
                     <app-post-card [postSeleccionado]="post"></app-post-card>
                 </div>
 
-
-
-
             </div>
-
-
-
-
         </div>
     </div>
 </section>
-
-
-<!--
-<section class="container2 mt-5">
-    <div class="col-md-12 text-center">
-        <h2>Latest Posts</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum commodi, repellendus voluptate animi at esse
-            cumque? Quam id vitae, nemo earum repellendus, sequi sed a voluptates, dolorem commodi porro libero.</p>
-    </div>
-    <div class="row">
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-
-    </div>
-</section>
--->

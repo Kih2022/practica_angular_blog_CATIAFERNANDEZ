@@ -40,15 +40,16 @@
                         <label class="form-label">Categoria</label>
                         <select class="form-control" formControlName="categoria">
                             <option value="" disabled></option>
-                            <option value="softawe">Software</option>
-                            <option value="softawe">Software</option>
-                            <option value="softawe">Software</option>
+                            <option value="softawe">Aventuras extremas</option>
+                            <option value="softawe">Aventuras acuaticas</option>
+                            <option value="softawe">Viajes culturales</option>
+                            <option value="softawe">Aventuras en la naturaleza</option>
                         </select>
                     </div>
                     <div class="formGroup">
                         <label for="imagen">Post Image</label>
 
-                        <input class="form-control" type="file" accept="image/*" formControlName="imagen" name="imagen">
+                        <input class="form-control" type="url" accept="image/*" formControlName="imagen" name="imagen">
                     </div>
 
                     <button class="btn btn-success" type="submit">Submit</button>
